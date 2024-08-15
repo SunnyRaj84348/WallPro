@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #c5afaf;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-div {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.wall {
+    color: rgb(235, 235, 235);
+}
+
+.pro {
+    color: red;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.nav-bar ul li {
+    margin: 0 15px;
+}
+
+.nav-bar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-bar ul li a:hover {
+    text-decoration: underline;
+}
+
+.category {
+    margin: 50px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.category h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.wallpapers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.wallpaper {
+    margin: 5px;
+    text-align: center;
+
+}
+
+.wallpaper img {
+    width: 250px;
+    height: 210px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wallpaper img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn {
+    margin-top: 10px;
+    padding: 5px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background-color: #45a049;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+.about {
+    background-color: wheat;
+    text-align: center;
+    padding: 20px;
+}
+
+.privacy {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 12px;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-div {
+        margin-bottom: 10px;
+    }
+
+    .nav-bar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-bar ul li {
+        margin: 5px 0;
+    }
+
+    .category {
+        margin: 20px 0;
+        padding: 15px;
+    }
+
+    .wallpaper img {
+        width: 200px;
+        height: 190px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar h1 {
+        font-size: 24px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-bar ul li {
+        margin: 8px 0;
+    }
+
+    .category h2 {
+        font-size: 20px;
+    }
+
+    .wallpaper img {
+        width: 140px;
+        height: 120px;
+    }
+
+    .download-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
