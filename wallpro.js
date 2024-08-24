@@ -16,3 +16,12 @@ function handleDownloadClick(event, imageSrc) {
     event.preventDefault(); // Prevent default button action
     downloadImage(imageSrc);
 }
+
+// to show the current time 
+const clock=document.getElementById('clock');
+
+setInterval(function(){
+    let date = new Date();
+
+    clock.innerHTML=date.toLocaleTimeString();
+},1000)

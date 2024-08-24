@@ -20,8 +20,10 @@ body {
 }
 
 .logo-div {
+    margin-left: 35px;
     display: flex;
     align-items: center;
+    
 }
 
 .logo {
@@ -29,6 +31,7 @@ body {
     font-weight: bold;
     display: flex;
     align-items: center;
+    
 }
 
 .wall {
@@ -51,7 +54,7 @@ body {
 }
 
 .nav-bar ul li {
-    margin: 0 15px;
+    margin: 0 19px;
 }
 
 .nav-bar ul li a {
@@ -62,6 +65,7 @@ body {
 
 .nav-bar ul li a:hover {
     text-decoration: underline;
+    box-shadow: 2px 2px 2px wheat;
 }
 
 .category {
@@ -97,7 +101,7 @@ body {
 
 .wallpaper img:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .download-btn {
@@ -132,6 +136,21 @@ body {
     text-align: center;
     padding: 12px;
     width: 100%;
+}
+
+#clock
+{
+    padding: 5px;
+    border-radius: 6px;
+    background-color: yellow;
+    color: black;
+
+}
+
+#clock:hover
+{
+    transform: scale(1.2);
+    box-shadow: 4px 4px 4px black;
 }
 
 /* Responsive Styles */
