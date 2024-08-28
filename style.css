@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #c5afaf;
+    background-color: black;
 }
 
 * {
@@ -120,7 +120,7 @@ body {
 }
 
 .download-btn {
-    margin-top: 10px;
+    margin-top: 25px;
     padding: 5px 12px;
     background-color: #4CAF50;
     color: white;
@@ -147,26 +147,12 @@ body {
 .privacy {
     background-color: black;
     color: white;
-    font-size: 12px;
-    text-align: center;
+    font-size: 9px;
+    text-align: right;
     padding: 12px;
     width: 100%;
 }
 
-#clock
-{
-    padding: 5px;
-    border-radius: 6px;
-    background-color: yellow;
-    color: black;
-
-}
-
-#clock:hover
-{
-    transform: scale(1.2);
-    box-shadow: 4px 4px 4px black;
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -217,12 +203,12 @@ body {
     }
 
     .wallpaper img {
-        width: 140px;
-        height: 120px;
+        width: 240px;
+        height: 320px;
     }
 
     .download-btn {
-        padding: 6px 12px;
+        padding: 7px 12px;
         font-size: 14px;
     }
 }
