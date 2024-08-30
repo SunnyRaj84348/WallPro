@@ -17,4 +17,4 @@ function handleDownloadClick(event, imageSrc) {
     downloadImage(imageSrc);
 }
 
-// to show the current time 
+
