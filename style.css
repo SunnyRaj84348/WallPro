@@ -81,12 +81,13 @@ html {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 25px 17px;
 }
 
 .wallpaper {
-    margin: 5px;
     text-align: center;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .wallpaper img {
@@ -102,13 +103,14 @@ html {
 }
 
 .download-btn {
-    margin-top: 25px;
+    margin-top: 10px;
     padding: 5px 12px;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    align-self: center;
 }
 
 .download-btn:hover {
