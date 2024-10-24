@@ -22,11 +22,16 @@ html {
     gap: 125px;
 }
 
-.navbar .logo {
+.logo {
     letter-spacing: 2px;
     font-family: "Mr Dafoe", cursive;
     font-size: 35px;
     color: rgb(160,164,188)
+}
+
+.logo a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .nav-bar {
@@ -62,6 +67,38 @@ html {
 
 .nav-bar ul li a:hover::after {
     width: 100%;
+}
+
+.search {
+    margin-top: 50px;
+}
+
+.search form {
+    display: flex;
+    justify-content: center;
+}
+
+.search form input {
+    border: 0;
+    outline: 0;
+    
+}
+
+.search form input:first-child {
+    width: 30%;
+    height: 45px;
+    padding: 8px;
+    border-radius: 5px 0 0 5px;
+}
+
+.search form input:nth-child(2) {
+    background-color: #ebc746ef;
+    width: 80px;
+    border-radius: 0 5px 5px 0;
+}
+
+.search form input:nth-child(2):hover {
+    cursor: pointer;
 }
 
 .category {
@@ -140,18 +177,28 @@ html {
 }
 
 .about {
-    background-color: wheat;
     text-align: center;
     padding: 20px;
+    color: rgba(255, 255, 255, 0.823);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+    background-color: #1e2229;
+}
+
+.about p {
+    max-width: 400px;
+    width: 100%;
+    font-size: 12px;
+    text-align: justify;
 }
 
 .privacy {
-    background-color: black;
-    color: white;
-    font-size: 9px;
+    font-size: 12px;
     text-align: center;
-    padding: 12px;
-    width: 100%;
+    color: rgba(255, 255, 255, 0.911);
+    padding: 10px;
 }
 
 
