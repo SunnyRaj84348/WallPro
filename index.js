@@ -153,7 +153,7 @@ searchForm.addEventListener("submit", e => {
                                 <div class="wallpapers">
                                     ${wallStr}
                                 </div>
-                                <div class="next"><button onclick="handleLoadMore(event)">Load More</button></div>
+                                <div class="load"><button onclick="handleLoadMore(event)">Load More</button></div>
                             </section>`
     })
         .catch(err => {

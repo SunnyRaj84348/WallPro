@@ -169,11 +169,19 @@ html {
     cursor: pointer;
 }
 
-.category .next {
-    color: white;
+.category .load {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 25px;
+}
+
+.category .load button {
+    color: rgba(255, 255, 255, 0.819);
+    border: 0;
+    outline: 0;
+    background-color: inherit;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .about {
