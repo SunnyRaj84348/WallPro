@@ -187,9 +187,13 @@ html {
     background-color: #1e2229;
 }
 
+.about h1 {
+    text-align: left;
+    font-size: 27px;
+}
+
 .about p {
-    max-width: 400px;
-    width: 100%;
+    width: 64.5%;
     font-size: 12px;
     text-align: justify;
 }
