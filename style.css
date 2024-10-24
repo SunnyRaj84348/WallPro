@@ -20,7 +20,6 @@ html {
     align-items: center;
     justify-content: center;
     gap: 125px;
-
 }
 
 .navbar .logo {
@@ -66,7 +65,7 @@ html {
 }
 
 .category {
-    margin: 50px 0;
+    margin: 20px;
     padding: 20px;
     border-radius: 10px;
 }
@@ -124,21 +123,13 @@ html {
 .download-btn {
     margin-top: 10px;
     padding: 5px 12px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #ebc746ef;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    align-self: center;
-}
-
-.download-btn:hover {
-    background-color: #45a049;
-}
-
-.error {
-    color: red;
-    margin-top: 10px;
 }
 
 .about {
