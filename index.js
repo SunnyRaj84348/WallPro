@@ -39,7 +39,7 @@ async function reqPexel(category, page) {
     try {
         const resp = await fetch(`https://api.pexels.com/v1/search?query=${category}&page=${page}`, {
             headers: {
-                "Authorization": "bdsQAzRv9zIDLnGXjrm27gjIuiOxmZuEIDSTHco2oEqyWJvgOjrvMqBu",
+                "Authorization": key,
             }
         })
 
@@ -52,7 +52,7 @@ async function reqPexel(category, page) {
         return json
 
     } catch (err) {
-        console.log(err);
+        return err
     }
 }
 
@@ -86,9 +86,81 @@ async function getWall(category) {
                                     </div>
                                 </section>`
     } catch (err) {
-        console.log(err);
+        return err
     }
 }
+
+let prevCategory = undefined
+let page = 1
+
+function handleLoadMore(event) {
+    event.preventDefault()
+
+    page += 1
+    let wallStr = ""
+
+    reqPexel(prevCategory, page).then(json => {
+        const photos = json.photos
+
+        for (const photo of photos) {
+            wallStr += `<div class="wallpaper">
+                        <img src="${photo.src.medium}" alt="Nature Wallpaper">
+                        <button class="download-btn"
+                            onclick="handleDownloadClick(event, '${photo.src.original}', '${photo.alt}')">Download</button>
+                    </div>`
+        }
+
+        const walls = document.querySelector(".wallpapers")
+        walls.innerHTML += wallStr
+    })
+        .catch(err => {
+            console.log(err);
+        })
+}
+
+const searchForm = document.querySelector(".search form")
+searchForm.addEventListener("submit", e => {
+    e.preventDefault()
+
+    let category = e.target.query.value
+
+    if (category == "")
+        return
+
+    reqPexel(category, page).then(json => {
+        page = 1
+
+        let wallStr = ""
+
+        const photos = json.photos
+
+        if (photos.length == 0) {
+            return
+        }
+
+        for (const photo of photos) {
+            wallStr += `<div class="wallpaper">
+                        <img src="${photo.src.medium}" alt="Nature Wallpaper">
+                        <button class="download-btn"
+                            onclick="handleDownloadClick(event, '${photo.src.original}', '${photo.alt}')">Download</button>
+                    </div>`
+        }
+
+        prevCategory = category
+
+        mainElem.innerHTML = `<section id="${category}" class="category">
+                                <div class="title"><span>${category}</span></div>
+                                <div class="wallpapers">
+                                    ${wallStr}
+                                </div>
+                                <div class="next"><button onclick="handleLoadMore(event)">Load More</button></div>
+                            </section>`
+    })
+        .catch(err => {
+            console.log(err);
+
+        })
+})
 
 let key = null
 
@@ -111,7 +183,15 @@ async function loadKey() {
 loadKey().then(() => {
     const catgList = ["nature", "abstract", "travels", "animals", "sports", "galaxy"]
 
-    for (const i of catgList) {
-        getWall(i)
+    try {
+        for (const i of catgList) {
+            getWall(i)
+        }
+    }
+    catch (err) {
+        console.log(err);
     }
 })
+    .catch(err => {
+        console.log(err);
+    })

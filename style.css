@@ -132,6 +132,13 @@ html {
     cursor: pointer;
 }
 
+.category .next {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .about {
     background-color: wheat;
     text-align: center;
