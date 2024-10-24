@@ -9,11 +9,10 @@
 
 html {
     font-family: "Poppins", sans-serif;
-    background-color: black;
+    background-color: #191c22;
 }
 
 .navbar {
-    background-color: #333;
     color: white;
     padding: 3px 0;
     display: flex;
@@ -68,11 +67,11 @@ html {
 .category {
     margin: 50px 0;
     padding: 20px;
-    background-color: #fff;
     border-radius: 10px;
 }
 
 .category h2 {
+    color: rgba(255, 255, 255, 0.896);
     text-align: center;
     margin-bottom: 20px;
 }
@@ -94,12 +93,11 @@ html {
     width: 250px;
     height: 210px;
     border-radius: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .wallpaper img:hover {
     transform: scale(1.05);
-    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .download-btn {
