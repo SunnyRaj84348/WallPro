@@ -80,7 +80,7 @@ async function getWall(category) {
         }
 
         mainElem.innerHTML += `<section id="${category}" class="category">
-                                    <h2>${category}</h2>
+                                    <div class="title"><span>${category}</span></div>
                                     <div class="wallpapers">
                                         ${wallStr}
                                     </div>

@@ -10,6 +10,7 @@
 html {
     font-family: "Poppins", sans-serif;
     background-color: #191c22;
+    scroll-behavior: smooth;
 }
 
 .navbar {
@@ -70,10 +71,30 @@ html {
     border-radius: 10px;
 }
 
-.category h2 {
-    color: rgba(255, 255, 255, 0.896);
-    text-align: center;
+.category .title {
+    display: flex;
+    justify-content: center;
     margin-bottom: 20px;
+}
+
+.category .title > span {
+    color: rgba(255, 255, 255, 0.896);
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.category .title > span::after {
+    content: "";
+    width: 100%;
+    height: 1.35px;
+    background-color: wheat;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 .wallpapers {
