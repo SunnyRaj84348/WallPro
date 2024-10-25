@@ -75,7 +75,7 @@ async function getWall(category) {
             wallStr += `<div class="wallpaper">
                             <img src="${photo.src.medium}" alt="Nature Wallpaper">
                             <button class="download-btn"
-                                onclick="handleDownloadClick(event, '${photo.src.original}', '${photo.alt}')">Download</button>
+                                onclick="handleDownloadClick(event, '${photo.src.large2x}', '${photo.alt}')">Download</button>
                         </div>`
         }
 
@@ -106,7 +106,7 @@ function handleLoadMore(event) {
             wallStr += `<div class="wallpaper">
                         <img src="${photo.src.medium}" alt="Nature Wallpaper">
                         <button class="download-btn"
-                            onclick="handleDownloadClick(event, '${photo.src.original}', '${photo.alt}')">Download</button>
+                            onclick="handleDownloadClick(event, '${photo.src.large2x}', '${photo.alt}')">Download</button>
                     </div>`
         }
 
@@ -142,7 +142,7 @@ searchForm.addEventListener("submit", e => {
             wallStr += `<div class="wallpaper">
                         <img src="${photo.src.medium}" alt="Nature Wallpaper">
                         <button class="download-btn"
-                            onclick="handleDownloadClick(event, '${photo.src.original}', '${photo.alt}')">Download</button>
+                            onclick="handleDownloadClick(event, '${photo.src.large2x}', '${photo.alt}')">Download</button>
                     </div>`
         }
 
